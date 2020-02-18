@@ -40,6 +40,7 @@ public class Gun : MonoBehaviour
 
     public void Shoot()
     {
+        //TODO : Add Pool
         var bullet = Instantiate(gunType.bulletPrefab, bulletPivot.position, bulletPivot.rotation);
         bullet.GetComponent<Bullet>().Initialize(gunType.damage, gunType.speed);
     }

@@ -12,7 +12,7 @@ public class GunPickeable : MonoBehaviour
     {
         //Run animation
 
-        //Instantiate Gun
+        //Instantiate Gun //TODO Add Pool
         var gun = Instantiate(gunType.gunAsset, transform.position, transform.rotation);
         gun.transform.parent = assetPivot;
     }

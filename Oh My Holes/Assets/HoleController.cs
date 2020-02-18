@@ -6,10 +6,13 @@ using UnityEngine.UI;
 public class HoleController : MonoBehaviour
 {
 
-
+    //Cash
     [SerializeField] int moneyGenerated;
     [SerializeField] float generationCooldown;
-    [SerializeField] MonsterSpawner spawner; 
+
+    //Enemy Spawning
+    [SerializeField] int spawnRate;
+
     [SerializeField] Animator anim; 
     [SerializeField] Text text; 
 
@@ -17,6 +20,7 @@ public class HoleController : MonoBehaviour
     void Start()
     {
         Invoke("GenerateCash", generationCooldown);
+        MonsterSpawner.instance.RegisterHole(this);
     }
 
     // Update is called once per frame
