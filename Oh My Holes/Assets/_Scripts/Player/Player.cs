@@ -27,6 +27,11 @@ public class Player : MonoBehaviour
         localRigidbody = GetComponent<Rigidbody>();
     }
 
+    internal void PickGun(GunScriptableObject gunType)
+    {
+        currentGun.UpdateGun(gunType);
+    }
+
     // Update is called once per frame
     void Update()
     {

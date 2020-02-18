@@ -4,7 +4,7 @@
 public class GunScriptableObject : ScriptableObject
 {
     public string gunName;
-    public int damage, fireRate;
+    public int damage, fireRate, speed;
     public GameObject bulletPrefab;
     public GameObject gunAsset;
 }

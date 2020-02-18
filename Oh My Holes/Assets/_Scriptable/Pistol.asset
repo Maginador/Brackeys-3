@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7288be1f4c70cd4c8910f220baa42b5, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
-  gunName: 
-  damage: 0
-  fireRate: 0
-  bulletPrefab: {fileID: 0}
+  gunName: Pistol
+  damage: 3
+  fireRate: 2
+  speed: 2
+  bulletPrefab: {fileID: 1973544542251330924, guid: 46710ecee37f56b448deeaa01ed18887,
+    type: 3}
+  gunAsset: {fileID: 1358299904332848272, guid: d616f1b5bbc219f45bf63e2d298182fc,
+    type: 3}
