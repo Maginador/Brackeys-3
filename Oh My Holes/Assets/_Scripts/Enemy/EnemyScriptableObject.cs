@@ -4,8 +4,21 @@
 public class EnemyScriptableObject : ScriptableObject
 {
     public string enemyName;
-    public int damage, moveSpeed, health;
-    public GameObject hability;
-    public enum EnemyNature {Seek, Run, ZigZag, Smart}
-    public EnemyNature nature;
+
+    //movement
+    public int walkSpeed, runSpeed;
+
+    //View
+    public int skillRange, attackRange, closeRange, longRange;
+
+    //Ofensive
+    public int damage, attackSpeed, skillCooldown;
+
+    //Defensive
+    public int health, evasion, defense;
+
+    //Others?
+    public GameObject skill, attack;
+    public EnemyData.EnemyNature nature;
+
 }

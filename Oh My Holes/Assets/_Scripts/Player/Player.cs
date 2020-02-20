@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+
+    public static Transform _transform;
+    public static Player _player;
     //other 
     [SerializeField] float playerDistanceFromCamera;
 
@@ -18,12 +22,16 @@ public class Player : MonoBehaviour
     [SerializeField] Transform assetsRoot;
     [SerializeField] PlayerUI UiController;
     [SerializeField] Gun currentGun;
+    [SerializeField] LayerMask floorLayer;
+    [SerializeField] LayerMask interactiblesLayer;
 
 
     bool canMove = true;
     // Start is called before the first frame update
     void Start()
     {
+        _transform = transform;
+        _player = this;
         localRigidbody = GetComponent<Rigidbody>();
     }
 
@@ -65,7 +73,7 @@ public class Player : MonoBehaviour
         var worldPos = viewCamera.ScreenToWorldPoint(Input.mousePosition + viewCamera.transform.forward* playerDistanceFromCamera);
         var direction = worldPos - viewCamera.transform.position;
         Debug.DrawLine(viewCamera.transform.position, direction * 100);
-        if (!Physics.Raycast(viewCamera.transform.position, direction, out hit)) return;
+        if (!Physics.Raycast(viewCamera.transform.position, direction, out hit,100, floorLayer.value,QueryTriggerInteraction.Collide)) return;
 
         var colPos = hit.point;
         assetsRoot.LookAt(hit.point);
