@@ -71,7 +71,6 @@ public class Player : MonoBehaviour
         assetsRoot.LookAt(hit.point);
         assetsRoot.eulerAngles = new Vector3(0, assetsRoot.eulerAngles.y, 0);
 
-        Debug.Log(direction.normalized);
     }
 
     private void MovePlayer()

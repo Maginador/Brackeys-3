@@ -10,7 +10,9 @@ public class TimeManager : MonoBehaviour
 
 
     [SerializeField] float timeLeft, dayLenght; 
-    [SerializeField] int dayCount; 
+    [SerializeField] int dayCount;
+    internal float delta = .5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,4 +43,8 @@ public class TimeManager : MonoBehaviour
     {
         return dayCount;
     }
+    
+
+    //TODO : Time Inteligence
+
 }

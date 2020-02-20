@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunName: Pistol
   damage: 3
-  fireRate: 2
-  speed: 2
+  fireRate: 12
+  speed: 5
   bulletPrefab: {fileID: 1973544542251330924, guid: 46710ecee37f56b448deeaa01ed18887,
     type: 3}
   gunAsset: {fileID: 1358299904332848272, guid: d616f1b5bbc219f45bf63e2d298182fc,
