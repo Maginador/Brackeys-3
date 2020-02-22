@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Entity
 {
 
 
@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] float playerDistanceFromCamera;
 
     //defense
-    [SerializeField] float moveSpeed, health, evasion, luck;
+    [SerializeField] float moveSpeed, evasion, luck;
     
     //local references
     Rigidbody localRigidbody;

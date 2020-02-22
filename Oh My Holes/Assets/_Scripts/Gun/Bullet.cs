@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    [SerializeField] string tagToDamage;
     int bDamage;
     float bulletSpeed;
 
@@ -23,8 +24,10 @@ public class Bullet : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Enemy")
+        if(other.tag == tagToDamage)
         {
+            var e = other.GetComponent<Entity>();
+            e.TakeDamage(bDamage);
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         }

@@ -9,7 +9,7 @@ public class EnemyData
 
 }
 
-public class Enemy : MonoBehaviour
+public class Enemy : Entity
 {
     //enemy data
     [SerializeField] EnemyScriptableObject enemyData;
@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        health = enemyData.health;
     }
 
     // Update is called once per frame
